@@ -21,12 +21,14 @@
 
 class Employee {
     constructor(name, shifts){
-        this.name = name;
-        this.shifts = shifts;
+        this.name = name
+        this.shifts = shifts
+    
     }
-    getSchedule()
+    getSchedule (){
+        console.log (`${this.name} works on ${this.shifts} shifts`)
+    }
 }
-
 
 
 /*
@@ -39,14 +41,16 @@ class Employee {
     shifts: weekday mornings, weekday afternoons
 */
 
-//CODE HERE
+let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons');
+console.log(empOne.name)
+console.log(empOne.shifts)
 
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
-//CODE HERE
+empOne.getSchedule()
 
 
 /*
@@ -61,9 +65,9 @@ class Employee {
     dot or bracket notation.
 */
 
-//CODE HERE
-
-
+const empTwo = {...empOne};
+empTwo.name = 'Nick';
+//console.log(empTwo.name)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -88,7 +92,19 @@ class Employee {
     the employees array. 
 */
 
-//CODE HERE
+class Manager extends Employee{
+    constructor(name, shifts, employees){
+        super(name, shifts)
+        
+        this.employees = employees;
+    }
+    getEmployees(){
+        console.log(`${this.name} manages ${this.employees} employees`);
+    }addEmployee(){
+
+    }
+    }
+
 
 
 

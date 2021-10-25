@@ -53,8 +53,11 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+function calcFinalPrice (cartTotal, couponValue, tax){
+    return ((cartTotal * (1 + tax)) - couponValue)
 
+}
+//console.log (calcFinalPrice (15, 5, .06))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -80,7 +83,7 @@ const cart = [
 /*
 Name: string, identify the customer
 Birthdate: date, reach out to the customer with birthday special offers
-Last item ordered: string, offer discount on the next time the customer buys the item
+Last item ordered: string, offer discount on the next time the customer buys the item, flag allergies or vegan preference
 Phone number: string, be able to greet the customer by name if they call in an order or reservation
 Address: string, be able to estimate time of arrival from order time or reservation time
     
@@ -92,4 +95,10 @@ Address: string, be able to estimate time of arrival from order time or reservat
     guidelines.
 */
 
-//CODE HERE
+let customerObj = {
+    'Name': "John Smith",
+    'Birthday': 10/10/1968,
+    'LastItem': 'Lasagna',
+    'Telephone': '555-555-5555',
+    'Address': '123 Any Street, Lafayette, LA 70501'
+}
